@@ -1,4 +1,4 @@
-# Flux Browser 🌸
+# Flux Browser 
 
 A unique search engine with personality! Flux Browser combines TF-IDF search with a dynamic power system and personality-driven responses inspired by romcom/shonen anime aesthetics.
 
