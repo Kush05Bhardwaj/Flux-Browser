@@ -10,7 +10,6 @@ def search(query, vectorizer, tfidf_matrix, documents, top_k=5):
     for idx in related_docs_indices:
         results.append({
             "url": documents[idx]['url'],
-            "text": documents[idx]['text'],
             "content": documents[idx]['content'],
             "score": cosine_similarities[idx]
         })

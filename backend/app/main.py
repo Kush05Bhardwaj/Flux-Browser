@@ -7,11 +7,14 @@ from app.personality.responses import search_reaction
 
 app = FastAPI(title="Flux")
 
-vectorizer, matrix, docs = build_index()
+index_data = build_index()
 
 @app.get("/search")
 def search_flux(q: str):
-    results = search(q, vectorizer, matrix, docs)
+    results = search(q, index_data["vectorizer"], index_data["tfidf_matrix"], index_data["documents"])
+
+    # Detect beginner vs advanced based on query complexity
+    level = "advanced" if len(q.split()) > 3 else "beginner"
 
     enriched = []
     for r in results:
@@ -21,6 +24,6 @@ def search_flux(q: str):
         })
 
     return {
-        "message": search_reaction("beginner"),
+        "message": search_reaction(level),
         "results": enriched
     }

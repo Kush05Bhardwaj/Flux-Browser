@@ -1,7 +1,10 @@
 [
-    {
-        "url": "https://example.com",
-        "text": "Example Domain",
-        "content": ""
-    }
+  {
+    "url": "https://docs.python.org/tutorial",
+    "content": "Python is an easy to learn programming language. It supports multiple paradigms and is widely used in web development and AI."
+  },
+  {
+    "url": "https://fastapi.tiangolo.com",
+    "content": "FastAPI is a modern web framework for building APIs with Python. It is fast and based on standard Python type hints."
+  }
 ]
